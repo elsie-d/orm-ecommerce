@@ -1,4 +1,4 @@
-const { Module, DataTypes} = require('sequelize')
+const { Model, DataTypes} = require('sequelize')
 const sequelize = require('../config/connection');
 
 
@@ -26,7 +26,9 @@ ProductTag.init({
             model: "tag",
             key: "id"
         },
-    },
+    }
+},
+{
     sequelize,
     timestamps: false,
     freezeTableName: true,
