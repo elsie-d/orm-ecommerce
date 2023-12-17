@@ -45,6 +45,7 @@ try{
 
 });
 
+// TO FIGURE OUT -----------------------------------------
 /* router.put('/:id', async (req, res) => {
   // update a category by its `id` value
   try{
@@ -66,6 +67,7 @@ try{
     });
     return;
   }
+  res.status(200).json({ message: 'Category was successfully deleted'})
  }
  catch(err){
   res.status(500).json(err);

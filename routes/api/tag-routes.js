@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
 
 });
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { 
   // create a new tag
 
   try{
@@ -48,7 +48,7 @@ router.post('/', async (req, res) => {
 });
 
 
-
+// TO FIGURE OUT ----------------------------------
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
 });
