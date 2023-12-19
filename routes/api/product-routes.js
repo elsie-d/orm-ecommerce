@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     const products = await Product.findAll({
       
       include: [
-        { model: Category, required: true },   {model: Tag, through: ProductTag, as: 'product_tags' },  
+        { model: Category, required: true },   {model: Tag, through: ProductTag },  
       ]   
     })
     res.json(products)
@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
   try{
     const prodID = await Product.findByPk(req.params.id, {
       include: [
-        { model: Category, required: true },   {model: Tag, through: ProductTag, as: 'product_tags' },  
+        { model: Category, required: true },   {model: Tag, through: ProductTag },  
       ]
     })
     res.json(prodID)
